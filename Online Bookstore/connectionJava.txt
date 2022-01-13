@@ -1,0 +1,68 @@
+package app.init;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+public class DBConnection {
+private static String drivers="com.mircrosoft.sqlserver.jdbc.SQLServerDriver";
+private static String url="jbdc:sqlserver://localhost:1433;DatabaseName=BookShopping";
+private static String user="sa";
+private static String password="1234";
+
+public static Connection GetConnection(){
+	Connection conn=null;
+	try{
+		Class.forName(drivers).newInstance();
+		}catch(InstantiationException e){
+			e.printStackTrace();}
+		catch(IllegalAccessException e){
+			e.printStackTrace();}
+		catch(ClassNotFoundException e){
+			e.printStackTrace();}
+		try{conn=DriverManager.getConnection(url, user, password);
+		}
+			catch(SQLException e){e.printStackTrace();
+		}
+			return conn;
+		}
+public static void close (Connection conn){
+	try{
+		if(conn != null&& !conn.isClosed())
+		conn.close();
+	}catch (SQLException e){
+		e.printStackTrace();
+	}
+}
+}
+
+public List<bookOrder> getBookOrderListAll() throws SQLException{
+	List<BookOrder> List =new ArrayList<BookOrder>();
+	Connection con =DBConnection.GetConnection();
+	PreparedStatement pstmt= null;
+	String sql= "SELECT * FROM BOOKORDER WHERE ORDERUSER IS NOT NULL"+"ORDER BY SUBDATE";
+	BookOrder bookorder = null;
+	try{
+		pstmt=con.prepareStatement(sql);
+		ResultSet rs = pstmt.executeQuery();
+		while (rs.next()){
+			bookorder = new BoookOrder();
+			bookorder.setCustomerName(rs.getString(2));
+			bookorder.setCustomerAddress(rs.getString(3));
+			bookorder.setCustomerTelephone(rs.getString(4));
+			bookorder.setNotic(rs.getString(5));
+			bookorder.setTotalPrice(rs.getString(6));
+			bookorder.setSubdate(String.valueOf(rs.getDate(7)));
+			bookorder.setSessuser(rs.getString(8));
+			bookorder.setMyBookId(rs.getString(9));
+			
+			list.add(bookorder);
+		}
+		rs.close();
+	}finally{
+		pstmt.close();
+		con.close();
+	}
+	return list;
+} 
