@@ -1,0 +1,13 @@
+<!--components/day/day.wxml-->
+<!-- <view class="page" data-weui-theme="{{theme}}">
+<view class="page__bd">
+  <view class="weui-cells weui-cells_after-title"> -->
+  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="weui-cell">
+    <view class='weui-cell__bd'>{{array[index]}}
+    </view>
+    </view>
+  </picker>
+  <!-- </view>
+</view>
+</view> -->

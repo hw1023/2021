@@ -1,0 +1,24 @@
+<view>
+<image style="width:750.4rpx;height:220rpx" mode="acceptFill" src='/images/logored_revision.jpg'></image> 
+</view>
+<view class="content">
+
+  <view class="account">
+  <view class="title">账号</view>
+  <view class="num"><input bindinput="inputName" placeholder="用户名"  placeholder-style="color:#999999;"/></view>
+  </view>
+
+  <view class="hr"></view>
+
+  <view class="account">
+  <view class="title">密码</view>
+  <view class="num">
+  <input bindinput="inputPassword" placeholder="请输入密码" password/></view>
+  </view>
+
+  <view class="hr"></view>
+
+  <button class="btn" type="primary" bindtap="login">登录</button> 
+   <view class="tips">温馨提示：</view>
+   <view class="tipsc">用户名为学工号，初始密码为“身份证号后六位数字”</view>
+</view>

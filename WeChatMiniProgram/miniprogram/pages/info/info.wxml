@@ -1,0 +1,26 @@
+<!--pages/info/info.wxml-->
+<view class="page" data-weui-theme="{{theme}}">
+    <view class="page__bd">
+        <view class="weui-cells__title"> </view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">学工号</view>
+                <view class="weui-cell__ft">{{userA}}</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__bd">姓名</view>
+                <view class="weui-cell__ft">{{userN}}</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__bd">用户类型</view>
+                <view class="weui-cell__ft">{{userT}}</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__bd">预约权限</view>
+                <view class="weui-cell__ft">{{userTa}}</view>
+            </view>
+        </view>
+        
+    </view>
+
+</view>    

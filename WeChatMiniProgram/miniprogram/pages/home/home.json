@@ -1,0 +1,15 @@
+{
+  "usingComponents": {
+    "weekch":"/components/weekch/weekch",
+    "time": "/components/time/time",
+    "location": "/components/location/location",
+    "day":"/components/day/day"
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "教室查询",
+    "navigationBarTextStyle": "black"
+  }
+}

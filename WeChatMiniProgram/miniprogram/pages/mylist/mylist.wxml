@@ -1,0 +1,75 @@
+<!--pages/mylist/mylist.wxml-->
+<view class="page" data-weui-theme="{{theme}}">
+	<view class="page__bd">
+		<view class="weui-panel weui-panel_access">
+			<view class="weui-panel__hd">我的预约</view>
+      </view>
+
+<view wx:for="{{datalist}}" wx:key="_id">
+<view wx:if="{{item.useraccount==uA}}">
+<view wx:if="{{item.check==0}}">
+
+
+    <view class="weui-cells__title"></view>
+		<view class="weui-form-preview">
+			<view class="weui-form-preview__hd">
+				<view class="weui-form-preview__item">
+					<label class="weui-form-preview__label">预约状态</label>
+					<em class="weui-form-preview__value">审核中</em>
+				</view>
+			</view>
+			<view class="weui-form-preview__bd">
+				<view class="weui-form-preview__item">
+					<label class="weui-form-preview__label">预约课室</label>
+					<text class="weui-form-preview__value">{{item.location}}{{item.room}}</text>
+				</view>
+				<view class="weui-form-preview__item">
+					<label class="weui-form-preview__label">预约日期</label>
+					<text class="weui-form-preview__value">{{item.week}}{{item.day}}{{item.time}}</text>
+				</view>
+				<view class="weui-form-preview__item">
+					<label class="weui-form-preview__label">提交时间</label>
+					<text class="weui-form-preview__value">{{item.applydate}}</text>
+				</view>
+			</view>
+			<view class="weui-form-preview__ft">
+				<a class="weui-form-preview__btn weui-form-preview__btn_primary" bindtap="delConfirm" data-item="{{item}}">取消</a>
+			</view>
+		</view>
+		<view class="weui-cells__title"></view>
+
+</view>
+<view wx:else>
+<view class="weui-cells__title"></view>
+		<view class="weui-form-preview">
+			<view class="weui-form-preview__hd">
+				<view class="weui-form-preview__item">
+					<label class="weui-form-preview__label">预约状态</label>
+					<em class="weui-form-preview__value">通过审核</em>
+				</view>
+			</view>
+			<view class="weui-form-preview__bd">
+				<view class="weui-form-preview__item">
+					<label class="weui-form-preview__label">预约课室</label>
+					<text class="weui-form-preview__value">{{item.location}}{{item.room}}</text>
+				</view>
+				<view class="weui-form-preview__item">
+					<label class="weui-form-preview__label">预约日期</label>
+					<text class="weui-form-preview__value">{{item.week}}{{item.day}}{{item.time}}</text>
+				</view>
+				<view class="weui-form-preview__item">
+					<label class="weui-form-preview__label">提交时间</label>
+					<text class="weui-form-preview__value">{{item.applydate}}</text>
+				</view>
+			</view>
+		</view>
+		<view class="weui-cells__title"></view>
+</view>
+
+
+</view>
+</view>
+
+
+    </view>
+</view>

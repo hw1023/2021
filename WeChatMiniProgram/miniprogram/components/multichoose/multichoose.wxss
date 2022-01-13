@@ -1,0 +1,15 @@
+/* components/multichoose/multichoose.wxss */
+.section{
+    margin-top: 40px;
+}
+.section_title{
+   background-color: #57ff65;
+}
+.picker{
+display: flex;
+}
+.item{
+  flex: 1;
+  background-color: green;
+  text-align: center;
+}

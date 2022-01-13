@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "w-tab-control":"/components/w-tab-control/w-tab-control",
+    "mp-dialog": "../../components/dialog/dialog"
+  }
+}

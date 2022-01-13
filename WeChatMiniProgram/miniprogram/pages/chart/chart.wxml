@@ -1,0 +1,55 @@
+<!--pages/chart/chart.wxml--> 
+<view wx:for="{{datalist}}" wx:key="_id">
+<!-- <view class="item">{{item.week}}</view>
+<view class="item">{{item.day}}</view>
+<view class="item">{{item.time}}</view>
+<view class="item">{{item.location}}</view>
+<view class="item">{{item.room}}</view>
+</view>
+</view> -->
+<view wx:if="{{item.check==1}}">
+
+<view class="weui-panel">
+			<view class="weui-panel__bd">
+				<view class="weui-media-box weui-media-box_text">
+					<h4 class="weui-media-box__title">{{item.room}}教室</h4>
+					<view class="green">通过审核，预约成功！</view>
+          <view class="weui-media-box__desc">申请人：{{item.username}}   提交时间：{{item.applydate}}</view>
+					<view class="weui-media-box__info">
+						<view class="weui-media-box__info__meta">{{item.week}}</view>
+						<view class="weui-media-box__info__meta">{{item.day}}</view>
+            <view class="weui-media-box__info__meta">{{item.time}}</view>
+						<view class="weui-media-box__info__meta weui-media-box__info__meta_extra">{{item.location}}</view>
+					</view>
+				</view>
+			</view>
+</view>
+
+</view>
+
+<view wx:else>
+<view class="weui-panel">
+			<view class="weui-panel__bd">
+				<view class="weui-media-box weui-media-box_text">
+					<h4 class="weui-media-box__title">{{item.room}}教室</h4>
+					<view class="red">申请已提交，等待审核中</view>
+          <view class="weui-media-box__desc">申请人：{{item.username}}   提交时间：{{item.applydate}}</view>
+					<view class="weui-media-box__info">
+						<view class="weui-media-box__info__meta">{{item.week}}</view>
+						<view class="weui-media-box__info__meta">{{item.day}}</view>
+            <view class="weui-media-box__info__meta">{{item.time}}</view>
+						<view class="weui-media-box__info__meta weui-media-box__info__meta_extra">{{item.location}}</view>
+            <view wx:if="{{item.useraccount==userid}}">
+            <button size="mini" type="warn" class="btn" catchtap="delConfirm" data-item="{{item}}">
+            取消预约
+            </button></view>
+					</view>
+				</view>
+			</view>
+</view>
+
+
+</view>
+
+
+</view>

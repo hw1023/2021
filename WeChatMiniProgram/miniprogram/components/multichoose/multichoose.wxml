@@ -1,0 +1,11 @@
+<!--components/multichoose/multichoose.wxml-->
+<view class="section">
+  <view class="section__title">教室筛选:</view>
+  <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{multiIndex}}" range="{{multiArray}}">
+    <view class="picker">
+    <view class="item">{{multiArray[0][multiIndex[0]]}}</view> 
+    <view class="item">{{multiArray[1][multiIndex[1]]}}</view> 
+    <view class="item">{{multiArray[2][multiIndex[2]]}}</view> 
+    </view>
+  </picker>
+</view>

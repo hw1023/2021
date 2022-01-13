@@ -1,0 +1,56 @@
+<!--pages/changep/changep.wxml-->
+<view class="page" data-weui-theme="{{theme}}">
+
+
+<view class="weui-cells__title">密码修改:</view>
+        <view class="weui-cells weui-cells_after-title">
+
+            <view class="weui-cell weui-cell_active">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">原密码</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="请输入原密码" password="true" bindinput="inputOld"/>
+                </view>
+            </view>
+          
+            <view class="weui-cell weui-cell_active">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">新密码</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="请输入新密码" password="true" bindinput="inputNew"/>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_active">
+                <view class="weui-cell__hd">
+                    <view class="weui-label">确认密码</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <input class="weui-input" placeholder="请再次输入新密码" password="true" bindinput="inputNew2"/>
+                </view>
+            </view>
+
+        </view>
+        
+
+        <view class="weui-cells weui-cells_after-title"></view>
+        <view class="weui-cells__title"></view>
+
+
+    <view class="page__bd page__bd_spacing">
+        <button type="warn" plain="true" bindtap='changeConf'>重置密码</button>
+    </view>
+    <view class="fadeIn" wx:if="{{iosDialog1}}">
+        <view class="weui-mask"></view>
+        <view class="weui-dialog">
+            <view class="weui-dialog__hd"><strong class="weui-dialog__title">提交并保存</strong></view>
+            <view class="weui-dialog__bd">建议设置新的密码,替换初始密码</view>
+            <view class="weui-dialog__ft">
+                <a class="weui-dialog__btn weui-dialog__btn_default" bindtap="close">取消</a>
+                <a class="weui-dialog__btn weui-dialog__btn_primary" bindtap="confirm">确认</a>
+            </view>
+        </view>
+    </view>
+</view>
+        

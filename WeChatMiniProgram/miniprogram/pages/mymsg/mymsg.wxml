@@ -1,0 +1,41 @@
+<!--pages/mymsg/mymsg.wxml-->
+<view class="page" data-weui-theme="{{theme}}">
+
+	<view class="page__bd">
+		<view class="weui-panel weui-panel_access">
+			<view class="weui-panel__hd">我的消息</view>
+			<view class="weui-panel__bd">
+
+      <view wx:for="{{datalist}}" wx:key="_id">
+        <view wx:if="{{item.useraccount==userA}}">
+        <view wx:if="{{item.result==0}}">
+				<a class="weui-media-box weui-media-box_appmsg">
+					<view class="weui-media-box__hd">
+						<image class="weui-media-box__thumb" src="/images/message.png" alt></image>
+					</view>
+					<view class="weui-media-box__bd">
+						<h4 class="weui-media-box__title">通知</h4>
+						<view class="weui-media-box__desc">管理员于{{item.decisiontime}}拒绝了您的预约申请</view>
+					</view>
+				</a>
+				</view>
+        <view wx:if="{{item.result==1}}">
+        <a class="weui-media-box weui-media-box_appmsg">
+					<view class="weui-media-box__hd">
+						<image class="weui-media-box__thumb" src="/images/message.png" alt></image>
+					</view>
+					<view class="weui-media-box__bd">
+						<h4 class="weui-media-box__title">通知</h4>
+						<view class="weui-media-box__desc">管理员于{{item.decisiontime}}同意了您的预约申请</view>
+					</view>
+				</a>
+        </view>
+        </view>
+        </view>
+
+
+        
+			</view>
+		</view>
+  </view>
+</view>

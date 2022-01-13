@@ -1,0 +1,41 @@
+.content{
+  margin-top: 80rpx;
+}
+.account{
+  display: flex;
+  flex-direction: row;
+  padding-left: 40rpx;
+  padding-top: 40rpx;
+  padding-bottom: 20rpx;
+  width:90%;
+}
+.title{
+  margin-right: 60rpx;
+  font-weight: bold;
+}
+.hr{
+  border: 1px solid #cccccc;
+  opacity: 0.2;
+  width:90%;
+  margin: 0 auto;
+  background-color: red;
+}
+.btn{
+  width: 90%;
+  margin-top: 80rpx;
+  color: #999999;
+}
+.tips{
+  padding-left: 40rpx;
+  padding-top: 120rpx;
+  width:90%;
+  font-size: 26rpx;
+  color:#727272;
+  font-weight: 550
+}
+.tipsc{
+  padding-left: 40rpx;
+  width:90%;
+  font-size: 26rpx;
+  color:#727272;
+}

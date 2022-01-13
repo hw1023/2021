@@ -1,0 +1,51 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/myinfo/myinfo",
+    "pages/home/home",
+    "pages/result/result",
+    "pages/chart/chart",
+    "pages/admin/admin",
+    "pages/test/test",
+    "pages/info/info",
+    "pages/mylist/mylist",
+    "pages/mymsg/mymsg",
+    "pages/changep/changep",
+    "pages/test2/test2"
+  ],
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/myinfo/myinfo",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my_fill.png",
+        "text": "个人主页"
+      },
+      {
+        "pagePath": "pages/chart/chart",
+        "iconPath": "images/time.png",
+        "selectedIconPath": "images/time_fill.png",
+        "text": "预约列表"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "images/same.png",
+        "selectedIconPath": "images/same_fill.png",
+        "text": "教室查询"
+      }
+    ]
+  },
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "校园教室管理系统",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2"
+}

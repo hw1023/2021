@@ -1,0 +1,138 @@
+<!--pages/test/test.wxml-->
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">Dialog</view>
+        <view class="page__desc">对话框</view>
+    </view>
+    <view class="page__bd">
+        <view class="weui-btn-area">
+            <view class="weui-btn" type="default" bindtap="openConfirm">确认取消按钮</view>
+            <button class="weui-btn" type="default" bindtap="tapOneDialogButton">只有确认按钮</button>
+        </view>
+    </view>
+    <mp-dialog title="test" show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
+        <view>test content</view>
+    </mp-dialog>
+    <mp-dialog title="test1" show="{{showOneButtonDialog}}" bindbuttontap="tapDialogButton" buttons="{{oneButton}}">
+        <view>test content1</view>
+    </mp-dialog>
+</view>
+<view class='box'>
+  <view class='rtn'>预约</view>
+</view>
+<view class="aa">
+<view class="a">
+<image style="width:750.4rpx;height:220rpx" mode="acceptFill" src='/images/logored_revision.jpg'></image> 
+</view></view>
+
+<view>{{currentDate}}</view>
+
+
+
+<view class="page" data-weui-theme="{{theme}}">
+	<view class="page__bd">
+		
+		<view class="weui-cells__title">未读数红点跟在主题信息后，统一在列表左侧</view>
+		<view class="weui-cells">
+			<view class="weui-cell weui-cell_active weui-cell_access">
+				<view class="weui-cell__bd">
+					<text style="vertical-align: middle;">个人信息</text>
+					<text class="weui-badge" style="margin-left: 5px;">8</text>
+				</view>
+				<view class="weui-cell__ft"></view>
+			</view>
+			<view class="weui-cell weui-cell_active weui-cell_access">
+				<view class="weui-cell__bd">
+					<text style="vertical-align: middle;">我的预约</text>
+					<text class="weui-badge" style="margin-left: 5px;">8</text>
+				</view>
+				<view class="weui-cell__ft">详细信息</view>
+			</view>
+			<view class="weui-cell weui-cell_active weui-cell_access">
+				<view class="weui-cell__bd">
+					<text style="vertical-align: middle;">我的消息</text>
+					<text class="weui-badge" style="margin-left: 5px;">New</text>
+				</view>
+				<view class="weui-cell__ft"></view>
+			</view>
+		</view>
+
+
+<view class="weui-cells__title">新消息提示跟摘要信息后，统一在列表右侧</view>
+		<view class="weui-cells">
+			<view class="weui-cell weui-cell_active weui-cell_access">
+				<view class="weui-cell__bd">单行列表</view>
+				<view class="weui-cell__ft" style="font-size: 0;">
+					<text style="vertical-align: middle; font-size: 17px;">详细信息</text>
+					<text class="weui-badge weui-badge_dot" style="margin-left: 5px; margin-right: 5px;"></text>
+				</view>
+			</view>
+		</view>
+
+
+	</view>
+</view>
+
+
+<view class="page" data-weui-theme="{{theme}}">
+	<view class="page__bd">
+		<view class="weui-form-preview">
+			<view class="weui-form-preview__hd">
+				<view class="weui-form-preview__item">
+					<label class="weui-form-preview__label">预约状态</label>
+					<em class="weui-form-preview__value">审核中</em>
+				</view>
+			</view>
+			<view class="weui-form-preview__bd">
+				<view class="weui-form-preview__item">
+					<label class="weui-form-preview__label">预约课室</label>
+					<text class="weui-form-preview__value">电动打蛋机</text>
+				</view>
+				<view class="weui-form-preview__item">
+					<label class="weui-form-preview__label">预约日期</label>
+					<text class="weui-form-preview__value">名字名字名字</text>
+				</view>
+				<view class="weui-form-preview__item">
+					<label class="weui-form-preview__label">提交时间</label>
+					<text class="weui-form-preview__value">很长很长的名字很长很长的名字很长很长的名字很长很长的名字很长很长的名字</text>
+				</view>
+			</view>
+			<view class="weui-form-preview__ft">
+				<a class="weui-form-preview__btn weui-form-preview__btn_primary">操作</a>
+			</view>
+		</view>
+		
+		
+<view class="weui-form-preview">
+			<view class="weui-form-preview__hd">
+				<view class="weui-form-preview__item">
+					<label class="weui-form-preview__label">预约状态</label>
+					<em class="weui-form-preview__value">审核中</em>
+				</view>
+			</view>
+			<view class="weui-form-preview__bd">
+				<view class="weui-form-preview__item">
+					<label class="weui-form-preview__label">预约课室</label>
+					<text class="weui-form-preview__value">电动打蛋机</text>
+				</view>
+				<view class="weui-form-preview__item">
+					<label class="weui-form-preview__label">预约日期</label>
+					<text class="weui-form-preview__value">名字名字名字</text>
+				</view>
+				<view class="weui-form-preview__item">
+					<label class="weui-form-preview__label">提交时间</label>
+					<text class="weui-form-preview__value">很长很长的名字很长很长的名字很长很长的名字很长很长的名字很长很长的名字</text>
+				</view>
+			</view>
+			<view class="weui-form-preview__ft">
+				<a class="weui-form-preview__btn weui-form-preview__btn_primary">操作</a>
+			</view>
+		</view>
+		
+
+
+
+
+
+	</view>
+</view>

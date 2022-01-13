@@ -1,0 +1,15 @@
+<!--pages/home/home.wxml-->
+<view class="page" data-weui-theme="{{theme}}">
+<view class="page__bd">
+<view class="weui-cells__title">日期选择:</view>
+<view class="weui-cells weui-cells_after-title">
+<weekch bind:weekdata='getweekdata'/>
+</view>
+<view class="diy ">
+<day bind:daydata='getday'/>
+</view>
+</view>
+</view>
+<time bind:timedata='gettime'/>
+<location bind:locationdata='getlocation'/>
+<button class="btn" type="primary" bindtap="click">教室查询</button> 
